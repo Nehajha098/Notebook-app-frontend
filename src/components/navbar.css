@@ -9,14 +9,9 @@
     align-items: center;
     padding: 0 40px; /* More horizontal breathing room */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: fixed;
+    position:fixed;
     top: 0;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    z-index: 1000;
 }
 
 .logo {
@@ -26,8 +21,7 @@
     border-radius: 4px; /* Slightly rounded edges for the logo icon */
 }
 
-.brand-name {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+.logo img {
+    height: 1.8rem;
+    width: 1.8rem;
 }
