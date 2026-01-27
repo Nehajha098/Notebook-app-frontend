@@ -1,5 +1,5 @@
 .body {
-    min-height: calc(100vh-60px);
+    height: 100vh;
     margin-top: 60px;
     display: flex;
     justify-content: center;

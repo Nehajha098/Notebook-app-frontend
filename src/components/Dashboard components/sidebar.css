@@ -1,0 +1,40 @@
+.sidebar {
+  width: 22%;
+  padding: 16px;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.notespace {
+    color: rgb(153, 153, 153);
+}
+
+.newfiles p {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.newfiles {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.addfiles {
+    height: 2rem;
+    width: 2rem;
+    background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+    color: white;
+    
+    /* Border & Corners */
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+
+    box-shadow: 0 2px 12px rgba(168, 85, 247, 0.4);
+}
