@@ -37,4 +37,22 @@
     font-size: 20px;
 
     box-shadow: 0 2px 12px rgba(168, 85, 247, 0.4);
+    cursor: pointer;
+}
+
+.file-item {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ddd;
+  word-break: break-word;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
 }

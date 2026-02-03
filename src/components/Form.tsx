@@ -1,31 +1,33 @@
 import axios from "axios";
 import "./form.css";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Form() {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  e.preventDefault();
+  try {
+    const response = await axios.post(
+      "http://localhost:8080/api/signin",
+      { email, password },
+      { withCredentials: true }
+    );
 
-    try {
-      const response = await axios.post(
-        "http://localhost:8080/api/signin",
-        {
-          email,
-          password
-        }
-      );
-      console.log(response.data);
-      alert(response.data);
-    }catch(err) {
-      console.log(err);
+    if (response.status === 200) {
+      // Avoid alert() if possible, it blocks the main thread
+      console.log("Success:", response.data);
+      navigate("/dashboard"); 
     }
-
-    console.log("Email:", email);
-    console.log("Password:", password);
-  };
+  } catch (err: any) {
+    console.error("Error during login:", err.response?.data || err.message);
+    alert("Login failed: " + (err.response?.data || "Server error"));
+  }
+};
 
   return (
     <div className="body">
