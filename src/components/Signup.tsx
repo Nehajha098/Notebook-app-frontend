@@ -31,7 +31,15 @@ function Signup() {
 
   return (
     <div className="body2">
-      <div className="left"></div>
+      <div className="left">
+        <div className="card">
+  <div className="card-body">
+    <h5 className="card-title">The Modern: Notely AI</h5>
+    <h6 className="card-subtitle mb-2">Read less. Understand more.</h6>
+    <p className="card-text">Don't let long documents slow you down. Notely uses advanced AI to distill complex PDFs into clear, actionable summaries in seconds. Upload your file and get to the heart of the matter instantly.</p>
+  </div>
+</div>
+      </div>
       <div className="right">
         <div className="form">
         <h6>Welcome!</h6>
